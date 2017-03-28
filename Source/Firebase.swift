@@ -223,8 +223,8 @@ public class Firebase {
         }
 
         let httpResult = Just.get(url, params: [:], data: [:], json: nil, headers: headers,
-                                  files: [:], auth: nil, allowRedirects: false, cookies: [:],
-                                  timeout: timeout, requestBody: nil, URLQuery: nil,
+                                  files: [:], auth: nil, cookies: [:], allowRedirects: false,
+                                  timeout: timeout, URLQuery: nil, requestBody: nil,
                                   asyncProgressHandler: nil, asyncCompletionHandler: completionHandler)
 
         guard complete == nil else { return nil }
@@ -249,17 +249,17 @@ public class Firebase {
         case .put:
             result = Just.put(url, params: [:], data: [:], json: json, headers: headers,
                               files: [:], auth: nil, cookies: [:], allowRedirects: false,
-                              timeout: timeout, requestBody: nil, URLQuery: nil,
+                              timeout: timeout, URLQuery: nil, requestBody: nil,
                               asyncProgressHandler: nil, asyncCompletionHandler: completionHandler)
         case .post:
             result = Just.post(url, params: [:], data: [:], json: json, headers: headers,
                                files: [:], auth: nil, cookies: [:], allowRedirects: false,
-                               timeout: timeout, requestBody: nil, URLQuery: nil,
+                               timeout: timeout, URLQuery: nil, requestBody: nil,
                                asyncProgressHandler: nil, asyncCompletionHandler: completionHandler)
         case .patch:
             result = Just.patch(url, params: [:], data: [:], json: json, headers: headers,
                                 files: [:], auth: nil, cookies: [:], allowRedirects: false,
-                                timeout: timeout, requestBody: nil, URLQuery: nil,
+                                timeout: timeout, URLQuery: nil, requestBody: nil,
                                 asyncProgressHandler: nil, asyncCompletionHandler: completionHandler)
         default:
             return nil
